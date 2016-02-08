@@ -1,0 +1,4 @@
+<h1>my todo app</h1>
+<todo-input></todo-input>
+<status-selector (select)="status = $event"></status-selector>
+<todo-list [status]="status"></todo-list>

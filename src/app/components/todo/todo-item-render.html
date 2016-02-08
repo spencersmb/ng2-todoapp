@@ -1,0 +1,7 @@
+<li>
+    <span [ngClass]="todoItem.status">{{todoItem.title}}</span>
+    <!-- event emitter to send out item to parent list -->
+    <!--redux-->
+    <!--<button (click)="outputTodo.emit(index)">Toggle</button>-->
+    <button (click)="outputTodo.emit(todoItem)">Toggle</button>
+</li>

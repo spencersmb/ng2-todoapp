@@ -1,0 +1,11 @@
+<div>
+    <ul>
+        <!-- when a status gets changed we have to notify the service of the change to, swap a new array with the changed item so the status filter can filter on the change.-->
+        <todo-item-render
+            *ngFor = "#i = index; #todo of todoService.state.todos | started: status;"
+            [todoItem]="todo"
+            [index]="i"
+            (outputTodo)="todoService.toggleTodo($event)"
+        ></todo-item-render>
+    </ul>
+</div>
